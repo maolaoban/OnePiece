@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		html{
+			background-color: #000;
+		}
+		.wrap{
+			width: 100%;
+			min-width: 1000px
+		}
+		.main-body{
+			overflow: hidden;
+			position: relative;
+			width: 100%;
+			height: 1084px;
+		}
+		.bg{
+			background: url(images/bg.jpg) center top no-repeat;
+		}
+		.person{
+			position: relative;
+			width: 1200px;
+			height: 1084px;
+			display: block;
+			margin: 0 auto;
+			/*z-index: 999;*/
+			background: url(images/person.png) center 154px no-repeat;
+		}
+		.main-wrap{
+			position: relative;
+			margin: 0 auto;
+			width: 1000px;
+			height: 1084px;
+		}
+		#logo{
+			position: absolute;
+			left:-70px;
+			top: 10px;
+		}
+		#zp{
+			position: absolute;
+			top: 27px;
+			left: 280px;
+		}
+		#welcome{
+			display: block;
+			position: absolute;
+			top: 17px;
+			right: 19px;
+			/*z-index: 11;*/
+			width: 115px;
+			height: 42px;
+			line-height: 42px;
+			color: #fff;
+			font-size: 18px;
+			font-weight: bold;
+			text-align: center;
+			border-radius: 21px;
+			background-color: rgba(26, 20, 14, 0.5);
+			text-decoration: none;
+		}
+		#welcome:hover{
+			background-color: #000;
+		}
+		#lable{
+			position: fixed;
+			background: url(images/libao.png) center no-repeat;
+			display: block;
+			width: 160px;
+			height: 130px;
+			bottom: 50px;
+			right: 50px;
+		}
+		.download{
+			position: absolute;
+			left: 305px;
+			top: 795px;
+		}
+		#ios{
+			position: absolute;
+			display: block;
+			width: 164px;
+			height: 51px;
+			left: 104px;
+			top: 5px;
+			background: url(images/ios-c.png)-2px 0 no-repeat;
+		}
+		#android{
+			position: absolute;
+			display: block;
+			width: 164px;
+			height: 55px;
+			left: 104px;
+			top: 60px;
+			background:url(images/android-c.png) 0 0 no-repeat;
+		}
+		#ios:hover{
+			background: url(images/ios-n.png)0 1px no-repeat;
+		}
+		#android:hover{
+			background: url(images/android-n.png)0 0 no-repeat;
+		}
+		.play{
+			width: 81px;
+			height: 82px;
+			background: url("images/play.png") 0 0 no-repeat;
+			position: absolute;
+			left: 572px;
+			top: 815px;
+			cursor: pointer;
+		}
+		.footer{
+			background: url(images/footer_bg.jpg) no-repeat scroll center top;
+			padding-bottom: 20px;
+		}
+		.footer .footer1{
+			width: 960px;
+			padding: 25px 20px;
+			color: #ADADAD;
+			margin: 0 auto;
+		}
+		.clear{
+			display: block;
+		}
+		.fcontainer{
+			width: 50%;
+			float: left;
+		}
+		.f1{
+			float: left;
+		}
+		.logo1{
+			font-size: 14px;
+			color: #bebebe;
+		}
+		.footer .footer1 .fcontainer p{
+			margin-top: 5px;
+		}
+		.footer .footer1 .fnav{
+			margin-left: 50px;
+		}
+		.footer .footer1 ul{
+			list-style: none;
+		}
+		.footer .footer1 .fnav li{
+			font-size: 14px;
+			line-height: 25px;
+			color: #bebebe;
+			margin-bottom: 2px;
+		}
+		.clear:after{
+			content: "";
+			display: block;
+			height: 0;
+			clear: both;
+		}
+		.finally{
+			font-size: 14px;
+			color: #bebebe;
+			text-align: center;
+			line-height: 20px;
+		}
+		.info{
+			text-align: center;
+		}
+		.jk{
+			font-size: 10px;
+			margin-top: 8px;
+			color: #5F5F5F;
+		}
+
+		.popc{
+			position: fixed;
+			display: table;
+			width: 100%;
+			height: 100px;
+			left: 0;
+			top: 0;
+			padding-top: 30px;
+			display:none;
+		}
+		.popc .table{
+			display: table-cell;
+			vertical-align: middle;
+		}
+		.popc1{
+			position: relative;
+			width: 430px;
+			margin:0 auto;
+			padding: 10px;
+			background-color: #ffd600;
+			border-radius: 5px;
+		}
+		.close{
+			position: absolute;
+			background: url(images/close-c.png)center center no-repeat;
+			width: 30px;
+			height: 30px;
+			top: 10px;
+			right: 10px;
+		}
+		.pt{
+			font-size: 25px;
+			color: #000;
+			line-height: 40px;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		.popc2{
+			background-color: #fff;
+			padding: 20px  30px;
+		}
+		.popc1 p{
+			line-height: 20px;
+			text-align: center;
+		}
+		.popc1 .ps{
+			font-size: 12px;
+			font-weight: bold;
+			margin-top: 8px;
+		}
+		.popc1 .pc{
+			position: relative;
+			font-size: 16px;
+		}
+		.popc1 .pc em{
+			font-size: 16px;
+			color: #d31b00;
+		}
+		.popc1 .pc i{
+			position: absolute;
+			right: 15px;
+			top: -39px;
+		}
+		.pq{
+			display: inherit;
+			margin:5px auto;
+			border: 2px solid: #ffd600;
+			border-radius: 5px;
+			width: 160px;
+		}
+	</style>
+	<script type="text/javascript">
+	window.onload = function(){
+		var lable = document.getElementById('lable');
+		var popc = document.getElementById('popc');
+		var close = document.getElementById('cl');
+		lable.onmouseover = function(){
+			popc.style.display = 'table';
+		}
+		close.onclick = function(){
+			popc.style.display = 'none';
+		}
+		close.onmouseover = function(){
+			close.style.opacity = '0.5';
+		}
+		close.onmouseout = function(){
+			close.style.opacity = '1';
+		}
+	}
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="main-body bg">
+			<div class="person">
+				<div class="main-wrap">
+					<a id="logo" href=""><img src="images/logo.png" alt=""></a>
+					<a id="zp" href=""><img src="images/slogan.png" alt=""></a>
+					<a id="welcome" href="海贼王启航官方网站.html">进入官网</a>
+					<a id="lable" href=""></a>
+					<div class="download">
+						<img src="images/download.png" alt="">
+						<a id="ios" href=""></a>
+						<a id="android" href=""></a>
+					</div>
+					<div class="play"></div>
+					<div class="popc" id="popc">
+						<div class="table">
+							<div class="popc1">
+								<div class="close" id="cl"></div>
+								<p class="pt">1分钟新手福利到手</p>
+								<div class="popc2">
+									<p class="ps"><img src="images/step1.png" alt=""></p>
+									<p class="pc">打开微信搜:
+										<em>Ming</em>
+									</p>
+									<p class="pc">
+										或扫描下方二维码
+									 	<img src="images/qrcode.jpg" alt="" class="pq">
+									 </p>
+									 <p class="ps"><img src="images/step2.png" alt=""></p>
+									 <p class="pc">关注微信公众号</p>
+									 <p class="ps"><img src="images/step3.png" alt=""></p>
+									 <p class="pc">输入</p>
+									 <p class="ps"><img src="images/step4.png" alt=""></p>
+									 <p class="pc">点击游戏主界面
+										<em>海旗头像</em>
+										<i><img src="images/icon.png" alt=""></i>
+									 </p>
+									 <p class="pc">
+									 	“点击”
+									 	<em>设置</em>
+									 	“→”
+									 	<em>兑换码</em>
+									 	“输入”
+									 	<em>礼包码</em>
+									 	“即可兑换礼包”
+									 </p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="footer1 clear">
+				<div class="fcontainer f1">
+					<img src="images/small_logos.png" alt="">
+					<p class="logo1">©Eiichiro Oda/Shueisha, Toei Animation</p>
+					<p class="logo1">©BANDAI NAMCO Entertainment Inc.</p>
+				</div>
+				<ul class="fnav f1">
+					<li>关注我们</li>
+					<li>新浪微薄</li>
+				</ul>
+				<ul class="fnav f1">
+					<li>概率公示</li>
+					<li>点击查看</li>
+				</ul>
+			</div>
+			<div class="finally">
+				<p>©Copyright 2013 mobage ALL RIGHTS RESERVED.</p>
+				<p>沪ICP备06011366号-10 新出网证（沪）字51号</p>
+				<div class="info">
+					<p>上海蛙扑网络技术有限公司</p>
+					<a href="">点击查看家长监护工程></a>
+				</div>
+				<div class="jk">
+					<p>抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当</p>
+					<p>适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

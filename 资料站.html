@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.head{
+			padding-bottom: 5px;
+			background: #b9a576;
+			border-bottom: 1px solid #797363;
+		}
+		.head .head1{
+			height: 200px;
+			border-bottom: 1px solid #000;
+			background: url(images/head_bg.png) top center no-repeat #1f1208;
+		}
+		.head1 .content{
+			width: 1000px;
+			position: relative;
+			margin: 0 auto;
+		}
+		.head1 .logo{
+			background: url(images/logo.png) no-repeat;
+			display: block;
+			width: 254px;
+			height: 195px;
+			/* position: absolute; */
+			top: 10px;
+			left: 10px;
+		}
+		.head1 .banner{
+			background: url(images/banner.png) no-repeat;
+			display: block;
+			width: 272px;
+			height: 95px;
+			position: absolute;
+			top: 20px;
+			right: 10px;
+		}
+		.head .seach{
+			position: absolute;
+			bottom: 10px;
+			right: 10px;
+		}
+		.head input{
+			font-size: 14px;
+		}
+		.head .sw{
+			background-color: #311706;
+			line-height: 37px;
+			width: 277px;
+			height: 37px;
+			border: none;
+			color: #fff;
+			text-indent: 10px;
+		}
+		.head .ss{
+			background: url(images/search_bg.png) repeat-x;
+			border: none;
+			height: 37px;
+			width: 60px;
+			line-height: 37px;
+			color: #920913;
+			margin: -4px 0 0 -4px;
+			vertical-align: middle;
+		}
+		.head .menu{
+			background: #4c2615;
+			border-top: 1px solid #600306;
+			border-bottom: 1px solid #600306;
+			height: 57px;
+		}
+		.menu .content{
+			width: 1000px;
+			position: relative;
+			margin: 0 auto;
+		}
+		.menu .content .menu1{
+			display: block;
+			list-style: none;
+			padding: 0px;
+			margin: 0px;
+		}
+		.menu .content ul li{
+			float: left;
+		}
+		.menu .content .menu1 a{
+			height: 58px;
+			display: block;
+			background-image: url(images/title.png);
+			width: 155px;
+			float: left;
+		}
+		.menu .content .menu1 a:hover{
+			background-image: url(images/title_1.png);
+		}
+		.menu .content .a{
+			background-position: 0 0;
+		}
+		.menu .content .b{
+			background-position: -151px 0;
+		}
+		.menu .content .c{
+			background-position: -302px 0;
+		}
+		.menu .content .d
+		{
+			background-position: -452px 0;
+		}
+		.menu .content .e{
+			background-position: -603px 0;
+		}
+		.menu .content .f{
+			background-position: -753px 0;
+		}
+		a{
+			text-decoration: none;
+			color: #014898;
+		}
+
+		.body{
+			margin: 20px 0 100px;
+			/* background-color: #e3dac5; */
+		}
+		.body .content{
+			width: 1000px;
+			position: relative;
+			margin: 0 auto;
+		}
+		.index .left{
+			float: left;
+			background-color: #311706;
+			width: 232px;
+			text-align: center;
+			padding: 8px 0;
+		}
+		.index  .ios{
+			background: url(images/ios.jpg) no-repeat;
+			width: 212px;
+			height: 61px;
+			margin: 0 auto 5px;
+			display: block;
+		}
+		.index  .ios:hover{
+			background: url(images/ios_btn.jpg);
+		}
+		.index .android{
+			background: url(images/android.jpg) no-repeat;
+			width: 212px;
+			height: 61px;
+			margin: 0 auto 5px;
+			display: block;
+		}
+		.index .android:hover{
+			background: url(images/android_btn.jpg);
+		}
+		.index .right{
+			float: right;
+		}
+		.index .low{
+			background: url(images/right_btn.png)no-repeat;
+			width: 233px;
+			height: 95px;
+			display: block;
+		}
+		.index .low:hover{
+			background: url(images/right_btn_hover.png)no-repeat;
+		}
+		.index .middle{
+			background: url(images/right_btn.png) no-repeat;
+			display: block;
+			width: 233px;
+			height: 95px;
+			background-position: 0 -95px;
+		}
+		.index .middle:hover{
+			background: url(images/right_btn_hover.png)no-repeat;
+			background-position: 0 -95px;
+		}
+		.index .high{
+			background: url(images/right_btn.png) no-repeat;
+			width: 233px;
+			height: 98px;
+			display: block;
+			background-position: 0 -190px;
+		}
+		.index .high:hover{
+			background: url(images/right_btn_hover.png)no-repeat;
+			background-position: 0 -190px;
+		}
+
+		.index .Middle{
+			margin: 0 0 0 240px;
+			width: 520px;
+			background-color: #4c2615;
+			position: relative;
+		}
+		.index .sz{
+			display: block;
+			width: 520px;
+			position: relative;
+			height: 290px;
+			overflow: hidden;
+		}
+		.index .sz ul{
+			list-style: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 4160px;
+		}
+		.index .sz ul li{
+			float: left;
+		}
+		.index .sz ul li img{
+			width: 520px;
+			height: 290px;
+		}
+		
+		.index .Middle  ol{
+			position: absolute;
+			bottom: 20px;
+			right: 0;
+		}
+		.index .Middle  ol li{
+			float: left;
+			display: block;
+			background-color: #fff;
+			width: 45px;
+			height: 5px;
+			line-height: 5px;
+			margin-right: 5px;
+			cursor: pointer;
+		}
+		.index .Middle ol li.current{
+			background-color: yellow;
+		}
+		ul{
+			list-style: none;
+		}
+		.body .title{
+			clear: both;
+			background: url(images/line.png) left bottom repeat-x;
+			font-size: 16px;
+			color: #5a0a08;
+			font-weight: bold;
+			height: 35px;
+			line-height: 25px;
+			margin-bottom: 10px;
+			margin-top: 15px;
+		}
+		.body .title .hb{
+			background: url(images/page_icon.png) no-repeat;
+			display: block;
+			height: 26px;
+			width: 26px;
+			float: left;
+			margin: 0 10px 0 0;
+		}
+		.body .menu{
+			margin-top: 15px;
+		}
+		.body .menu ul{
+			list-style: none;
+		}
+		.body .menu ul li{
+			display: block;
+			float: left;
+			margin: 0 10px 10px 0;
+		}
+		.body .menu ul li a{
+			color: #340000;
+			font-weight: bold;
+			font-size: 14px;
+			padding: 0px 10px;
+			height: 35px;
+			line-height: 35px;
+			display: block;
+			background-color: #ccc1ac;
+		}
+		.body .menu ul li a:hover{
+			background-color: #dcae00;
+		}
+		.body .menu .a1{
+			background-color: #dcae00;
+		}
+		.body .title .dj{
+			background: url(images/icon_tool.png) no-repeat;
+			display: block;
+			height: 26px;
+			width: 26px;
+			float: left;
+			margin: 0 10px 0 0;
+		}
+		.body .title .fb{
+			background: url(images/icon_re.png) no-repeat;
+			display: block;
+			height: 26px;
+			width: 26px;
+			float: left;
+			margin: 0 10px 0 0;
+		}
+
+		.footer{
+			background:#000 url(images/footer_bg.jpg) no-repeat scroll center top;
+			padding-bottom: 20px;
+		}
+		.footer .footer1{
+			width: 960px;
+			padding: 25px 20px;
+			color: #ADADAD;
+			margin: 0 auto;
+		}
+		.clear{
+			display: block;
+		}
+		.fcontainer{
+			width: 50%;
+			float: left;
+		}
+		.f1{
+			float: left;
+		}
+		.logo1{
+			font-size: 14px;
+			color: #bebebe;
+		}
+		.footer .footer1 .fcontainer p{
+			margin-top: 5px;
+		}
+		.footer .footer1 .fnav{
+			margin-left: 50px;
+		}
+		.footer .footer1 ul{
+			list-style: none;
+		}
+		.footer .footer1 .fnav li{
+			font-size: 14px;
+			line-height: 25px;
+			color: #bebebe;
+			margin-bottom: 2px;
+		}
+		.clear:after{
+			content: "";
+			display: block;
+			height: 0;
+			clear: both;
+		}
+		.finally{
+			font-size: 14px;
+			color: #bebebe;
+			text-align: center;
+			line-height: 20px;
+		}
+		.info{
+			text-align: center;
+		}
+		.jk{
+			font-size: 10px;
+			margin-top: 8px;
+			color: #5F5F5F;
+		}
+	</style>
+	<script type="text/javascript" src="script/animate.js"></script>
+	<script type="text/javascript">
+		function $(id){
+			return document.getElementById(id);
+		}
+		window.onload = function(){
+			var ul = $('ul');
+			var sz = $('sz');
+
+			var imgc = ul.getElementsByTagName('img').length;
+			var ol = document.createElement('ol');
+
+			for (var i = 0; i < imgc; i++) {
+				var li = document.createElement('li');
+				if(i == 0){
+					li.className = 'current';
+				}
+				li.setAttribute('index',i);
+				li.onmouseover = function(){
+					var lis = ol.getElementsByTagName('li');
+					for (var i = 0; i < lis.length; i++) {
+						lis[i].className = '';
+					}
+					this.className = 'current';
+					animate(ul,-520 * this.getAttribute('index'),20);
+					key = this.getAttribute('index');
+					square = key;
+					
+				}
+				ol.appendChild(li);
+			}
+			sz.appendChild(ol);
+			
+			ul.appendChild(ul.children[0].cloneNode(true));
+
+			var timer = null;
+			var key = 0;
+			var square = 0;
+
+			function mplay(){
+				var lis = ol.children;
+				key++;
+				if(key > lis.length){
+					key = 1;
+					ul.style.left = 0 + 'px';
+				}
+				animate(ul,-520 * key,20);
+				square++;
+				if(square >= lis.length){
+					square = 0;
+				}
+				for (var i = 0; i < lis.length; i++) {
+					lis[i].className = '';
+				}
+				lis[square].className = 'current';
+			}
+			if(timer){
+				clearInterval(timer);
+			}
+			timer = setInterval(mplay,3000);
+			sz.onmouseover = function(){
+				clearInterval(timer);
+			}
+			sz.onmouseout = function(){
+				timer = setInterval(mplay,3000)
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="head">
+		<div class="head1">
+			<div class="content">
+				<b class="logo"></b>
+				<b class="banner"></b>
+				<div class="seach">
+					<form method="post" id="seach">
+						<input type="text" class="sw" placeholder="搜索" name="sw">
+						<input type="submit"  class="ss" value="搜索">
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="menu">
+			<div class="content">
+				<ul class="menu1">
+					<li>
+						<a href="#" class="a"></a>
+					</li>
+					<li>
+						<a href="#" class="b"></a>
+					</li>
+					<li>
+						<a href="#" class="c"></a>
+					</li>
+					<li>
+						<a href="#" class="d"></a>
+					</li>
+					<li>
+						<a href="#" class="e"></a>
+					</li>
+					<li>
+						<a href="#" class="f"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="body">
+		<div class="content">
+			<div class="index">
+				<div class="left">
+					<a href="#" class="ios"></a>
+					<a href="#" class="android"></a>
+					<img src="images/code.jpg" width="158" height="135" alt="">
+				</div>
+				<div class="right">
+					<a href="" class="low"></a>
+					<a href="" class="middle"></a>
+					<a href="" class="high"></a>
+				</div>
+				<div class="Middle">
+						<div class="sz" id="sz">
+							<ul id="ul">
+								<li><img src="images/Sengoku.png" alt=""></li>
+								<li><img src="images/Rayleigh.png" alt=""></li>
+								<li><img src="images/sogeking.png" alt=""></li>
+								<li><img src="images/nami02.png" alt=""></li>
+								<li><img src="images/Boa Hancocks.png" alt=""></li>
+								<li><img src="images/Blackbeard.png" alt=""></li>
+								<li><img src="images/sabo.png" alt=""></li>
+							</ul>
+
+						</div>
+				</div>
+				<div class="title">
+					<p class="hb"></p>伙伴
+				</div>
+				<div class="menu">
+					<ul>
+						<li><a href="" class="a1">全部伙伴</a></li>
+						<li><a href="">前排型</a></li>
+						<li><a href="">中排型</a></li>
+						<li><a href="">后排型</a></li>
+						<li><a href="">力量型</a></li>
+						<li><a href="">敏捷型</a></li>
+						<li><a href="">智力型</a></li>
+					</ul>
+				</div>
+				<div class="title">
+					<p class="dj"></p>道具
+				</div>
+				<div class="menu">
+					<ul>
+						<li><a href="" class="a1">日常道具</a></li>
+						<li><a href="">伙伴进阶材料</a></li>
+						<li><a href="">装备进阶材料</a></li>
+					</ul>
+				</div>
+				<div class="title">
+					<p class="fb"></p>副本掉落
+				</div>
+				<div class="menu">
+					<ul>
+						<li><a href="" class="a1">普通副本</a></li>
+						<li><a href="">精英副本</a></li>
+						<li><a href="">航海日历</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+			<div class="footer1 clear">
+				<div class="fcontainer f1">
+					<img src="images/small_logos.png" alt="">
+					<p class="logo1">©Eiichiro Oda/Shueisha, Toei Animation</p>
+					<p class="logo1">©BANDAI NAMCO Entertainment Inc.</p>
+				</div>
+				<ul class="fnav f1">
+					<li>关注我们</li>
+					<li>新浪微薄</li>
+				</ul>
+				<ul class="fnav f1">
+					<li>概率公示</li>
+					<li>点击查看</li>
+				</ul>
+			</div>
+			<div class="finally">
+				<p>©Copyright 2013 mobage ALL RIGHTS RESERVED.</p>
+				<p>沪ICP备06011366号-10 新出网证（沪）字51号</p>
+				<div class="info">
+					<p>上海蛙扑网络技术有限公司</p>
+				</div>
+				<div class="jk">
+					<p>抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当</p>
+					<p>适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</p>
+				</div>
+			</div>
+	</div>
+</body>
+</html>

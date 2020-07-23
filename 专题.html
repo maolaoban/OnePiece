@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.wrap{
+			width: 100%;
+			min-width: 1200px;
+		}
+		.header{
+			background-color: #074681;
+			height: 62px;	
+			border: none;
+		}
+		.main-body{
+			margin: 0 auto;
+			width: 1000px;
+		}
+		.header .container{
+			position: relative;
+		}
+		#logo{
+			position: absolute;
+			top: 10px;
+			left: 0px;
+			width: 180px;
+		}
+		#logo img{
+			display: block;
+			width: 100%;
+		}
+		.header ul{
+			list-style: none;
+		}
+		.nav{
+			line-height: 62px;
+			margin-left: 270px;
+			padding-left: 45px;
+		}
+		.header ul li{
+			float: left;
+			margin-right: 48px;
+			background-color: transparent;
+		}
+		.header ul li a{
+			height: 60px;
+			padding: 0;
+			color: #abd9f7;
+			font-size: 16px;
+			font-weight: normal;
+			display: block;
+			text-decoration: none;
+		}
+		.header ul li a:hover{
+			border-bottom: 2px solid #0983d8;
+			color: #fff;
+		}
+		.header .zt{
+			border-bottom: 2px solid #0983d8;
+			color: #fff;
+		}
+		.link{
+			position: absolute;
+			right: 0;
+			top: 12px;
+			width: 138px;
+			height: 38px;
+			background: url(images/header-sns.png) center center no-repeat;
+			cursor: pointer;
+		}
+		#weixin{
+			position: absolute;
+			top: 0;
+			display: block;
+			width: 38px;
+			height: 38px;
+		}
+		#aa{
+			display: none;
+			position: absolute;
+			top: 0;
+			left: -96px;
+			z-index: 100;
+		}
+		.body{
+			background:#0081db url(images/bg1.png)0 -35px no-repeat;
+			height: auto;
+			min-height: auto;
+		}
+		.title{
+			position: relative;
+		}
+		.title img{
+			display: block;
+		}
+		.body .title p{
+			position: absolute;
+			bottom: 85px;
+			color: #2d4952;
+			font-size: 12px;
+		}
+		.body .title p a{
+			font-size: 12px;
+			color: #2d4952;
+			text-decoration: none;
+		}
+
+		.main-body .content{
+			background-color: #fff;
+			padding: 15px 30px 80px 30px;
+			min-height: 200px;
+		}
+		.content ul{
+			list-style: none;
+		}
+		.content ul li a{
+			padding: 35px 0;
+			display: block;
+			overflow: hidden;
+			text-decoration: none;
+		}
+		.content ul li a:hover{
+			background-color:  #CDCDCD;
+		}
+		.content div{
+			margin-top: 20px;
+		}
+		.content .list-img img{
+			display: block;
+			width: 296px;
+		}
+		.float{
+			float: left;
+		}
+		.content .list-content{
+			margin-left: 330px;
+		}
+		.content .list-content .ct{
+			font-size: 20px;
+			color: #5840a6;
+			padding: 5px 0 10px 0;
+			border-bottom: 2px solid #e2e2e2;
+		}
+		.content .list-content .cc{
+			font-size: 14px;
+			color: #1b1d1e;
+			line-height: 22px;
+			margin-top: 10px;
+		}
+		.footer{
+			background:#000 url(images/footer_bg.jpg) no-repeat scroll center top;
+			padding-bottom: 20px;
+		}
+		.footer .footer1{
+			width: 960px;
+			padding: 25px 20px;
+			color: #ADADAD;
+			margin: 0 auto;
+		}
+		.clear{
+			display: block;
+		}
+		.fcontainer{
+			width: 50%;
+			float: left;
+		}
+		.f1{
+			float: left;
+		}
+		.logo1{
+			font-size: 14px;
+			color: #bebebe;
+		}
+		.footer .footer1 .fcontainer p{
+			margin-top: 5px;
+		}
+		.footer .footer1 .fnav{
+			margin-left: 50px;
+		}
+		.footer .footer1 ul{
+			list-style: none;
+		}
+		.footer .footer1 .fnav li{
+			font-size: 14px;
+			line-height: 25px;
+			color: #bebebe;
+			margin-bottom: 2px;
+		}
+		.clear:after{
+			content: "";
+			display: block;
+			height: 0;
+			clear: both;
+		}
+		.finally{
+			font-size: 14px;
+			color: #bebebe;
+			text-align: center;
+			line-height: 20px;
+		}
+		.info{
+			text-align: center;
+		}
+		.jk{
+			font-size: 10px;
+			margin-top: 8px;
+			color: #5F5F5F;
+		}
+	</style>
+	<script type="text/javascript">
+		function $(id){
+			return document.getElementById(id);
+		}
+		window.onload = function(){
+			var wx = $('weixin');
+			var aa = $('aa');
+			wx.onmouseover = function(){
+				aa.style.display = 'block';
+			}
+			wx.onmouseout = function(){
+				aa.style.display = 'none';
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="header">
+			<div class="main-body container">
+				<div id="logo">
+					<img src="images/logo.png" alt="">
+				</div>
+				<ul class="nav">
+					<li><a href="./海贼王启航官方网站.html">官网首页</a></li>
+					<li><a href="./新闻公告.html">新闻公告</a></li>
+					<li><a href="#" class="zt">专题中心</a></li>
+					<li><a href="./资料站.html" target="_blank">资料站</a></li>
+				</ul>
+				<div class="link">
+				    <div id="weixin">
+				    	<div id="aa"><img src="./images/weixin.png" alt=""></div>
+				    </div>
+			    </div>
+			</div>
+		</div>
+		<div class="body">
+			<div class="main-body">
+				<div class="title">
+					<img src="images/page-title-act.png" alt="">
+					<p class="small">
+						“ 您的位置 ”
+						 <a href="">官网首页 > </a>
+						<span></span>
+						<em>  专题中心  </em>
+					</p>
+				</div>
+				<div class="content">
+					<ul>
+						<li>
+							<a href="">
+								<div class="list-img float">
+									<img src="images/0.jpg" alt="">
+								</div>
+								<div class="list-content">
+									<p class="ct">双蛋跨年专题上线，年末福利全收录！</p>
+									<p class="cc">2018年即将结束，《航海王 启航》在年末为船长们准备了四重“礼物”。布玲登船、缤纷超值活动、元旦突破兑换屋以及双蛋跨年好礼接踵而至！为了让更多玩家不错过圣诞及元旦的各种精彩活动，启航特地准备了【双蛋狂欢跨年】专题，全面收录近期所有的福利活动。</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div class="list-img float">
+									<img src="images/1.jpg" alt="">
+								</div>
+								<div class="list-content">
+									<p class="ct">狂欢盛宴来袭，双11专题火热出炉！</p>
+									<p class="cc">启航双11盛宴重磅揭幕，海量福利登船！ 雷利兑换券直换&无需钻石！历史主打突破伙伴低价兑换！超强返钻风暴再度来袭！惊爆好物限时折扣秒杀！改名卡限定礼包特惠上架！绝版皮肤低价再贩穿新衣！</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div class="list-img float">
+									<img src="images/2.jpg" alt="">
+								</div>
+								<div class="list-content">
+									<p class="ct">62位人气伙伴免费登船，惊天福利重磅呈现</p>
+									<p class="cc">船长仅需每日前往活动页面登录，即可轻松领取获得一位人气伙伴！船长们所期待的SS级藤虎、SS级黑胡子、SS级新世界·布鲁克等人气角色，足足62位，将陆续登船，组建大船团不再是梦想！</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div class="list-img float">
+									<img src="images/3.jpg" alt="">
+								</div>
+								<div class="list-content">
+									<p class="ct">甜点3将星实力者——山慈菇登场！</p>
+									<p class="cc">9月20日更新后，启航迎来了一位全新的伙伴。他是航海世界里赫赫有名的强者，赏金高达10亿之多！也是路飞目前遇到最棘手的对手。他就是甜点3将星之首——夏洛特·山慈菇。游戏中，山慈菇为SS级斩击系伙伴，与他结伴战斗，绝对会给你带来惊喜哦！</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div class="list-img float">
+									<img src="images/4.jpg" alt="">
+								</div>
+								<div class="list-content">
+									<p class="ct">邀请萌新，免费赢取海量好礼！</p>
+									<p class="cc">启航又来送福利啦！活动期间船长们只要成功邀请新船长加入启航大家庭，就能免费领取多重好礼！海量钻石、正版手办、足金恶魔果实金饰，一起打包带走！</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div class="list-img float">
+									<img src="images/5.jpg" alt="">
+								</div>
+								<div class="list-content">
+									<p class="ct">官网改版清凉一夏，神秘福利持续送爽</p>
+									<p class="cc">《航海王启航》官网每逢夏季都会换上新颜，呈现在所有船长大大眼前~夏天的感觉触手可及，一抹蔚蓝，一份清爽，还有草帽团清爽的造型为你养眼消暑，这时候如果再配上一杯冰镇快乐水，简直不要太惬意！这次除了草帽团清爽养眼的造型外，还有全新夏日签到送福利活动哦！</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div class="list-img float">
+									<img src="images/6.jpg" alt="">
+								</div>
+								<div class="list-content">
+									<p class="ct">14.0无畏挑战，斗志燃烧</p>
+									<p class="cc">夏季即将结束，金秋又要来临。启航决定趁着这炎热的夏天结束之际，点燃最后一把火——《航海王 启航》14.0全新版本定档8月30日。燃烧夏末，助热初秋！</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="footer1 clear">
+				<div class="fcontainer f1">
+					<img src="images/small_logos.png" alt="">
+					<p class="logo1">©Eiichiro Oda/Shueisha, Toei Animation</p>
+					<p class="logo1">©BANDAI NAMCO Entertainment Inc.</p>
+				</div>
+				<ul class="fnav f1">
+					<li>关注我们</li>
+					<li>新浪微薄</li>
+				</ul>
+				<ul class="fnav f1">
+					<li>概率公示</li>
+					<li>点击查看</li>
+				</ul>
+			</div>
+			<div class="finally">
+				<p>©Copyright 2013 mobage ALL RIGHTS RESERVED.</p>
+				<p>沪ICP备06011366号-10 新出网证（沪）字51号</p>
+				<div class="info">
+					<p>上海蛙扑网络技术有限公司</p>
+					<a href="">点击查看家长监护工程></a>
+				</div>
+				<div class="jk">
+					<p>抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当</p>
+					<p>适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

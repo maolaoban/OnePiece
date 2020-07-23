@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.wrap{
+			width: 100%;
+			min-width: 1200px;
+		}
+		.header{
+			background-color: #074681;
+			height: 62px;	
+			border: none;
+		}
+		.main-body{
+			margin: 0 auto;
+			width: 1000px;
+		}
+		.header .container{
+			position: relative;
+		}
+		#logo{
+			position: absolute;
+			top: 10px;
+			left: 0px;
+			width: 180px;
+		}
+		#logo img{
+			display: block;
+			width: 100%;
+		}
+		.header ul{
+			list-style: none;
+		}
+		.nav{
+			line-height: 62px;
+			margin-left: 270px;
+			padding-left: 45px;
+		}
+		.header ul li{
+			float: left;
+			margin-right: 48px;
+			background-color: transparent;
+		}
+		.header ul li a{
+			height: 60px;
+			padding: 0;
+			color: #abd9f7;
+			font-size: 16px;
+			font-weight: normal;
+			display: block;
+			text-decoration: none;
+		}
+		.header ul li a:hover{
+			border-bottom: 2px solid #0983d8;
+			color: #fff;
+		}
+		.header .xwgg{
+			border-bottom: 2px solid #0983d8;
+			color: #fff;
+		}
+		.link{
+			position: absolute;
+			right: 0;
+			top: 12px;
+			width: 138px;
+			height: 38px;
+			background: url(images/header-sns.png) center center no-repeat;
+			cursor: pointer;
+		}
+		#weixin{
+			position: absolute;
+			top: 0;
+			display: block;
+			width: 38px;
+			height: 38px;
+		}
+		#aa{
+			display: none;
+			position: absolute;
+			top: 0;
+			left: -96px;
+			z-index: 100;
+		}
+		.body{
+			background:#0081db url(images/bg1.png)0 -35px no-repeat;
+			height: auto;
+			min-height: auto;
+		}
+		.title{
+			position: relative;
+		}
+		.title img{
+			display: block;
+		}
+		.body .title p{
+			position: absolute;
+			bottom: 85px;
+			color: #2d4952;
+			font-size: 12px;
+		}
+		.body .title p a{
+			font-size: 12px;
+			color: #2d4952;
+			text-decoration: none;
+		}
+
+		.main-body .page-content{
+			background-color: #fff;
+			padding: 15px 30px 80px 30px;
+			min-height: 200px;
+		}
+		.main-body .page-content ul{
+			list-style: none;
+		}
+		.main-body .page-content .Sl{
+			line-height: 50px;
+		}
+		 .main-body .page-content .Sl  li{
+			margin-bottom: -2px;
+			text-align: center;
+			font-size: 25px;
+			display: block;
+			color: #707070;
+			float: left;
+			cursor: pointer;
+		}
+		/* .main-body .page-content .Sl  li:first-child{
+		 	color: #0983d8;
+			border-bottom: 2px solid #0983d8;
+		} */
+		.clear:after{
+			content: "";
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+		}
+		
+		.page-content .Slist .list{
+			margin: 30px 0 0 0;
+		}
+		.page-content .Slist .list a{
+			display: block;
+			padding: 8px 0;
+			border-bottom: 1px solid #e8e8e8;
+		}
+		.page-content .Slist .gd{
+			background-color: #0983d8;
+			width: 52px;
+			height: 24px;
+			line-height: 24px;
+			text-align: center;
+			border-radius: 5px;
+			color: #fff;
+			font-size:16px; 
+			float: left;
+		}
+		.page-content .Slist .wz{
+			width: 80%;
+			height: 24px;
+			margin-left: 10px;
+			font-size: 16px;
+			color: #000;
+			float: left;
+		}
+		.page-content .Slist .rq{
+			font-size: 16px;
+			color: #8f8f8f;
+			float: right;
+		}
+
+		.page-content .Lf{
+			display: none;
+		}
+		.page-content .Lf .list{
+			margin: 30px 0 0 0;
+		}
+		.page-content .Lf .list a{
+			display: block;
+			padding: 8px 0;
+			border-bottom: 1px solid #e8e8e8;
+		}
+		.page-content .Lf .xw{
+			background-color: #c13c3c;
+			width: 52px;
+			height: 24px;
+			line-height: 24px;
+			text-align: center;
+			border-radius: 5px;
+			color: #fff;
+			font-size:16px; 
+			float: left;
+		}
+		.page-content .Lf .wz{
+			width: 80%;
+			height: 24px;
+			margin-left: 10px;
+			font-size: 16px;
+			color: #000;
+			float: left;
+		}
+		.page-content .Lf .rq{
+			font-size: 16px;
+			color: #8f8f8f;
+			float: right;
+		}
+
+		.page-content .Gm{
+			display: none;
+		}
+		.page-content .Gm .list{
+			margin: 30px 0 0 0;
+		}
+		.page-content .Gm .list a{
+			display: block;
+			padding: 8px 0;
+			border-bottom: 1px solid #e8e8e8;
+		}
+		.page-content .Gm .hd{
+			background-color: #dc7325;
+			width: 52px;
+			height: 24px;
+			line-height: 24px;
+			text-align: center;
+			border-radius: 5px;
+			color: #fff;
+			font-size:16px; 
+			float: left;
+		}
+		.page-content .Gm .wz{
+			width: 80%;
+			height: 24px;
+			margin-left: 10px;
+			font-size: 16px;
+			color: #000;
+			float: left;
+		}
+		.page-content .Gm .rq{
+			font-size: 16px;
+			color: #8f8f8f;
+			float: right;
+		}
+
+
+		.footer{
+			background:#000 url(images/footer_bg.jpg) no-repeat scroll center top;
+			padding-bottom: 20px;
+		}
+		.footer .footer1{
+			width: 960px;
+			padding: 25px 20px;
+			color: #ADADAD;
+			margin: 0 auto;
+		}
+		.clear{
+			display: block;
+		}
+		.fcontainer{
+			width: 50%;
+			float: left;
+		}
+		.f1{
+			float: left;
+		}
+		.logo1{
+			font-size: 14px;
+			color: #bebebe;
+		}
+		.footer .footer1 .fcontainer p{
+			margin-top: 5px;
+		}
+		.footer .footer1 .fnav{
+			margin-left: 50px;
+		}
+		.footer .footer1 ul{
+			list-style: none;
+		}
+		.footer .footer1 .fnav li{
+			font-size: 14px;
+			line-height: 25px;
+			color: #bebebe;
+			margin-bottom: 2px;
+		}
+		.clear:after{
+			content: "";
+			display: block;
+			height: 0;
+			clear: both;
+		}
+		.finally{
+			font-size: 14px;
+			color: #bebebe;
+			text-align: center;
+			line-height: 20px;
+		}
+		.info{
+			text-align: center;
+		}
+		.jk{
+			font-size: 10px;
+			margin-top: 8px;
+			color: #5F5F5F;
+		}
+	</style>
+	<script type="text/javascript">
+		function $(id){
+			return document.getElementById(id);
+		}
+		window.onload = function(){
+			var wx = $('weixin');
+			var aa = $('aa');
+			wx.onmouseover = function(){
+				aa.style.display = 'block';
+			}
+			wx.onmouseout = function(){
+				aa.style.display = 'none';
+			}
+
+
+			var gd = $('gd');
+			var xw = $('xw');
+			var hd = $('hd');
+			var sl = $('sl');
+			var lf = $('lf');
+			var gm = $('gm');
+			gd.onclick = function(){
+				sl.style.display = 'block';
+				lf.style.display = 'none';
+				gm.style.display = 'none';
+			}
+			xw.onclick = function(){
+				sl.style.display = 'none';
+				lf.style.display = 'block';
+				gm.style.display = 'none';
+			}
+			hd.onclick = function(){
+				sl.style.display = 'none';
+				lf.style.display = 'none';
+				gm.style.display = 'block';
+			}
+
+			var lis = $('sbox').getElementsByTagName('li');
+			for (var i = 0; i < lis.length; i++) {
+				lis[i].onmouseover = function(){
+					for (var i = 0; i < lis.length; i++) {
+						lis[i].style.color = '';
+						lis[i].style.borderBottom = '';
+					}
+					this.style.color = '#0983d8';
+					this.style.borderBottom = '2px solid #0983d8';
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="header">
+			<div class="main-body container">
+				<div id="logo">
+					<img src="images/logo.png" alt="">
+				</div>
+				<ul class="nav">
+					<li><a href="./海贼王启航官方网站.html">官网首页</a></li>
+					<li><a href="#"  class="xwgg">新闻公告</a></li>
+					<li><a href="./专题.html">专题中心</a></li>
+					<li><a href="./资料站.html">资料站</a></li>
+				</ul>
+				<div class="link">
+				    <div id="weixin">
+				    	<div id="aa"><img src="./images/weixin.png" alt=""></div>
+				    </div>
+			    </div>
+			</div>
+		</div>
+		<div class="body">
+			<div class="main-body">
+				<div class="title">
+					<img src="images/page-title-article.png" alt="">
+					<p class="small">
+						“ 您的位置 ”
+						 <a href="">官网首页 > </a>
+						<span></span>
+						<em>  新闻公告  </em>
+					</p>
+				</div>
+				<div class="page-content">
+					<ul class="Sl clear" id="sbox">
+						<li style="width:33%" id="gd">公告</li>
+						<li style="width:33%" id="xw">新闻</li>
+						<li style="width:33%" id="hd">活动</li>
+					</ul>
+					<ul class="Slist" id="sl">
+						<li class="list">
+							<a href="" class="clear">
+								<p class="gd">公告</p>
+								<p class="wz">第一百五十六届“王下七武海争霸赛”冠军名单!</p>				
+								<p class="rq">2018-12-19</p>
+							</a>
+						</li class="list">
+						<li class="list">
+							<a href="" class="clear">
+								<p class="gd">公告</p>
+								<p class="wz">12月20日全区全服维护公告!</p>				
+								<p class="rq">2018-12-20</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="gd">公告</p>
+								<p class="wz">12月21日两大新服即将开放!</p>				
+								<p class="rq">2018-12-21</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="gd">公告</p>
+								<p class="wz">12月14日两大新服即将开放!</p>				
+								<p class="rq">2018-12-14</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="gd">公告</p>
+								<p class="wz">第一百五十五届“王下七武海争霸赛”冠军名单!!</p>				
+								<p class="rq">2018-12-10</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="gd">公告</p>
+								<p class="wz">12月13日服务器升级维护公告!</p>				
+								<p class="rq">2018-12-13</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="gd">公告</p>
+								<p class="wz">12月6日全区全服维护公告!</p>				
+								<p class="rq">2018-12-06</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="gd">公告</p>
+								<p class="wz">12月7日两大新服即将开放!</p>				
+								<p class="rq">2018-12-07</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="gd">公告</p>
+								<p class="wz">第一百五十四届“王下七武海争霸赛”冠军名单!!</p>				
+								<p class="rq">2018-12-05</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="gd">公告</p>
+								<p class="wz">11月29日全区全服维护公告!</p>				
+								<p class="rq">2018-11-29</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="gd">公告</p>
+								<p class="wz">11月30日两大新服即将开放!</p>				
+								<p class="rq">2018-11-30</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="gd">公告</p>
+								<p class="wz">第一百五十三届“王下七武海争霸赛”冠军名单!!</p>				
+								<p class="rq">2018-11-25</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="gd">公告</p>
+								<p class="wz">11月23日两大新服即将开放!</p>				
+								<p class="rq">2018-11-23</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="gd">公告</p>
+								<p class="wz">11月22日全区全服维护公告!</p>				
+								<p class="rq">2018-11-22</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="gd">公告</p>
+								<p class="wz">第一百五十二届“王下七武海争霸赛”冠军名单!!</p>				
+								<p class="rq">2018-11-15</p>
+							</a>
+						</li>
+					</ul>
+					<ul class="Lf" id="lf">
+						<li class="list">
+							<a href="" class="clear">
+								<p class="xw">新闻</p>
+								<p class="wz">精打细算—启航全资源产出介绍!</p>				
+								<p class="rq">2018-12-19</p>
+							</a>
+						</li class="list">
+						<li class="list">
+							<a href="" class="clear">
+								<p class="xw">新闻</p>
+								<p class="wz">双面人格布玲明日为爱登场！超爽福利同步放送!</p>				
+								<p class="rq">2018-12-20</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="xw">新闻</p>
+								<p class="wz">【玩家攻略】晶石宝藏---珍宝巡航规则和技巧详解!</p>				
+								<p class="rq">2018-12-21</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="xw">新闻</p>
+								<p class="wz">【玩家攻略】斩击保护伞---搭上斩击列车的居鲁士强化分析!</p>				
+								<p class="rq">2018-12-14</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="xw">新闻</p>
+								<p class="wz">【玩家攻略】贝里制造机---极限斗技场模式详解!!</p>				
+								<p class="rq">2018-12-10</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="xw">新闻</p>
+								<p class="wz">【玩家攻略】沧海横流方显英雄本色---七武海争霸赛详解!</p>				
+								<p class="rq">2018-12-13</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="xw">新闻</p>
+								<p class="wz">12月6日全区全服维护公告!</p>				
+								<p class="rq">2018-12-06</p>
+							</a>
+						</li>
+					</ul>
+					<ul class="Gm" id="gm">
+						<li class="list">
+							<a href="" class="clear">
+								<p class="hd">活动</p>
+								<p class="wz">蔓谢丽充值大回馈，大熊做客活动酒馆!</p>				
+								<p class="rq">2018-12-19</p>
+							</a>
+						</li class="list">
+						<li class="list">
+							<a href="" class="clear">
+								<p class="hd">活动</p>
+								<p class="wz">雷利做客活动酒馆，料理特惠礼包限时上架!</p>				
+								<p class="rq">2018-12-20</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="hd">活动</p>
+								<p class="wz">黑胡子充值大回馈，暖冬兑换券特惠礼包限时上架!</p>				
+								<p class="rq">2018-12-21</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="hd">活动</p>
+								<p class="wz">新世界·布鲁克充值大回馈 （明日最后一天）!</p>				
+								<p class="rq">2018-12-14</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="hd">活动</p>
+								<p class="wz">藤虎限时做客活动酒馆，暖冬充值大回馈 </p>				
+								<p class="rq">2018-12-10</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="hd">活动</p>
+								<p class="wz">新世界·布鲁克充值大回馈 （明日最后一天）!</p>				
+								<p class="rq">2018-12-13</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="hd">活动</p>
+								<p class="wz">双倍风暴提前来袭，丽久限时做客活动酒馆!</p>				
+								<p class="rq">2018-12-06</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="hd">活动</p>
+								<p class="wz">凯文迪修特惠礼包限时上架，黄猿充值大回馈!</p>				
+								<p class="rq">2018-12-07</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="hd">活动</p>
+								<p class="wz">9倍返利！幸运指针特惠礼包献礼双12！</p>				
+								<p class="rq">2018-12-05</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="hd">活动</p>
+								<p class="wz">克拉松充值大回馈，新世界·佐罗做客活动酒馆!</p>				
+								<p class="rq">2018-11-29</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="hd">活动</p>
+								<p class="wz">多弗拉门戈充值大回馈，凯文迪修特惠礼包限时上架!</p>				
+								<p class="rq">2018-11-30</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="hd">活动</p>
+								<p class="wz">第一百五十三届“王下七武海争霸赛”冠军名单!!</p>				
+								<p class="rq">2018-11-25</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="hd">活动</p>
+								<p class="wz">汉库珂充值大回馈，巴尔托洛梅奥做客活动酒馆!</p>				
+								<p class="rq">2018-11-23</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="hd">活动</p>
+								<p class="wz">双倍风暴周末来袭，藤虎充值大回馈 （明日最后一天）!</p>				
+								<p class="rq">2018-11-22</p>
+							</a>
+						</li>
+						<li class="list">
+							<a href="" class="clear">
+								<p class="hd">活动</p>
+								<p class="wz">藤虎充值大回馈，每日活跃送幸运福袋!</p>				
+								<p class="rq">2018-11-15</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="footer1 clear">
+				<div class="fcontainer f1">
+					<img src="images/small_logos.png" alt="">
+					<p class="logo1">©Eiichiro Oda/Shueisha, Toei Animation</p>
+					<p class="logo1">©BANDAI NAMCO Entertainment Inc.</p>
+				</div>
+				<ul class="fnav f1">
+					<li>关注我们</li>
+					<li>新浪微薄</li>
+				</ul>
+				<ul class="fnav f1">
+					<li>概率公示</li>
+					<li>点击查看</li>
+				</ul>
+			</div>
+			<div class="finally">
+				<p>©Copyright 2013 mobage ALL RIGHTS RESERVED.</p>
+				<p>沪ICP备06011366号-10 新出网证（沪）字51号</p>
+				<div class="info">
+					<p>上海蛙扑网络技术有限公司</p>
+					<a href="">点击查看家长监护工程></a>
+				</div>
+				<div class="jk">
+					<p>抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当</p>
+					<p>适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
